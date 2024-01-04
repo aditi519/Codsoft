@@ -8,8 +8,8 @@ public class Number_Game {
 			Scanner sc = new Scanner(System.in);
 			Random random = new Random();
 			
-			int lR= 1;
-			int hR= 100;
+			int a= 1;
+			int h= 100;
 			
 			int numberOfAttempts = 10;
 			int score = 0;
@@ -17,11 +17,11 @@ public class Number_Game {
 			System.out.println("Welcome to the Number Game!");
 			
 			do {
-				int targetNumber = random.nextInt(hR- lR+ 1) + lR;
+				int targetNumber = random.nextInt(h- a+ 1) + a;
 				int attempts = 0;
 				boolean guessCorrectly = false;
 				
-				System.out.println("\nI have selected a number between "+ lR+ " and " + hR+ ". Can u guess it?");
+				System.out.println("\nI have selected a number between "+ a+ " and " + h+ ". Can u guess it?");
 				
 				while(attempts < numberOfAttempts) {
 					System.out.print("Enter your guess : ");
@@ -35,10 +35,10 @@ public class Number_Game {
 						break;
 					}
 					else if(userGuess < targetNumber) {
-						System.out.println("Your guess too low! Try again.");
+						System.out.println("Number is too  low. ");
 					}
 					else {
-						System.out.println("Your guess too high! try again.");
+						System.out.println("Number too high. ");
 					}
 				}
 				
